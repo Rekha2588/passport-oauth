@@ -1,7 +1,6 @@
 const express = require('express');
 require('dotenv').config();
 const authRouter = require('./routes/authRoutes');
-const profileRoutes = require('./routes/profileRoutes');
 const userRoutes = require('./routes/userRoutes')
 const passport = require('passport');
 const passportSetup = require('./config/passport-setup');
@@ -28,7 +27,6 @@ app.use(passport.session());
 connectDb();
 
 app.use('/auth', authRouter);
-app.use('/profile', profileRoutes);
 app.use('/users', userRoutes);
 
 app.get('/', (req, res) => {

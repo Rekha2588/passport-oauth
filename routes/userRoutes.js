@@ -31,7 +31,6 @@ router.post('/signup', async (req, res) => {
 
 router.post('/signin', async (req, res) => {
     passport.authenticate('local', (error, user, info) => {
-
         if (error) {
             return res.status(500).json({ error: 'Something went wrong' })
         }
