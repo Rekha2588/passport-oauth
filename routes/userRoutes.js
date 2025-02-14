@@ -21,9 +21,7 @@ router.post('/signup', async (req, res) => {
     if (user) {
         res.status(201).json({
             _id: user.id,
-            email: user.email,
-            dob: user.dateOfBirth,
-            phoneNumber: user.phoneNumber
+            email: user.email
         });
     } else {
         res.status(400);
